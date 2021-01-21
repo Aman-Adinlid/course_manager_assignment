@@ -9,8 +9,19 @@ public class Student {
     private String email;
     private String address;
 
-    public Student(int id, String name, String email, String address) {
-        Id = id;
+
+    public Student() {
+    }
+
+    public Student(String name, String email, String address) {
+
+        this.name = name;
+        this.email = email;
+        this.address = address;
+    }
+
+    public Student(int Id, String name, String email, String address) {
+        this.Id = Id;
         this.name = name;
         this.email = email;
         this.address = address;

@@ -2,18 +2,43 @@ package se.lexicon.course_manager_assignment.model;
 
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.Objects;
 
 public class Course {
 
     private int Id;
-    private String course;
+    private String courseName;
     private LocalDate startDate;
     private int weekDuration;
     private Collection <Student> students;
 
-    public Course(int id, String course, LocalDate startDate, int weekDuration, Collection<Student> students) {
-        Id = id;
-        this.course = course;
+
+    public Course() {
+    }
+
+    public Course (String courseName, LocalDate startDate, int weekDuration) {
+        this.courseName = courseName;
+        startDate = startDate;
+        this.weekDuration = weekDuration;
+    }
+
+    public Course(Integer id, String courseName, LocalDate startDate, int weekDuration) {
+        this.Id = id;
+        this.courseName = courseName;
+        startDate = startDate;
+        this.weekDuration = weekDuration;
+
+    }
+
+    public Course(String courseName, LocalDate startDate, int weekDuration, Collection<Student> students) {
+        this.courseName = courseName;
+        startDate = startDate;
+        this.weekDuration = weekDuration;
+        this.students = students;
+    }
+    public Course(int Id, String courseName, LocalDate startDate, int weekDuration, Collection<Student> students) {
+        Id = Id;
+        this.courseName = courseName;
         this.startDate = startDate;
         this.weekDuration = weekDuration;
         this.students = students;
@@ -27,12 +52,12 @@ public class Course {
         Id = id;
     }
 
-    public String getCourse() {
-        return course;
+    public String getCourseName() {
+        return courseName;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
+    public void setCourseName(String course) {
+        this.courseName = course;
     }
 
     public LocalDate getStartDate() {
@@ -59,21 +84,33 @@ public class Course {
         this.students = students;
     }
 
+    public boolean enrollStudent(Student student){
+        return true;
+    }
+
+    public boolean unenrollStudent(Student student){
+        return true;
+    }
+
+
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(Id, courseName, startDate, weekDuration, students);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return Id == course.Id && weekDuration == course.weekDuration && Objects.equals(courseName, course.courseName) && Objects.equals(startDate, course.startDate) && Objects.equals(students, course.students);
     }
 
     @Override
     public String toString() {
         return "Course{" +
                 "Id=" + Id +
-                ", course='" + course + '\'' +
+                ", courseName='" + courseName + '\'' +
                 ", startDate=" + startDate +
                 ", weekDuration=" + weekDuration +
                 ", students=" + students +

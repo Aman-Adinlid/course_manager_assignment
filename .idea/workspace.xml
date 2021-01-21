@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6e63ad9-4889-419a-a938-da997b23852a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="d6e63ad9-4889-419a-a938-da997b23852a" name="Default Changelist" comment="setter and getter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/model/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/model/Student.java" afterDir="false" />
@@ -39,6 +38,17 @@
       <option name="presentableId" value="Default" />
       <updated>1611010407967</updated>
     </task>
+    <task id="LOCAL−00001" summary="setter and getter">
+      <created>1611014140238</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1611014140238</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="setter and getter" />
+    <option name="LAST_COMMIT_MESSAGE" value="setter and getter" />
   </component>
 </project>
