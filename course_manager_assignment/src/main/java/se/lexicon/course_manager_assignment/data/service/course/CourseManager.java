@@ -12,7 +12,6 @@ import se.lexicon.course_manager_assignment.dto.views.CourseView;
 
 import java.time.LocalDate;
 import java.util.List;
-
 @Service
 public class CourseManager implements CourseService {
 
