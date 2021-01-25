@@ -1,6 +1,4 @@
 package se.lexicon.course_manager_assignment.data.dao;
-
-
 import se.lexicon.course_manager_assignment.data.sequencers.StudentSequencer;
 import se.lexicon.course_manager_assignment.model.Student;
 

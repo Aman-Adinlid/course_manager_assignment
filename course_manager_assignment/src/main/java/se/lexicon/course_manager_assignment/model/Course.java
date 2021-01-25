@@ -10,13 +10,13 @@ public class Course {
     private String courseName;
     private LocalDate startDate;
     private int weekDuration;
-    private Collection <Student> students;
+    private Collection<Student> students;
 
 
     public Course() {
     }
 
-    public Course (String courseName, LocalDate startDate, int weekDuration) {
+    public Course(String courseName, LocalDate startDate, int weekDuration) {
         this.courseName = courseName;
         startDate = startDate;
         this.weekDuration = weekDuration;
@@ -36,6 +36,7 @@ public class Course {
         this.weekDuration = weekDuration;
         this.students = students;
     }
+
     public Course(int Id, String courseName, LocalDate startDate, int weekDuration, Collection<Student> students) {
         Id = Id;
         this.courseName = courseName;
@@ -84,11 +85,11 @@ public class Course {
         this.students = students;
     }
 
-    public boolean enrollStudent(Student student){
+    public boolean enrollStudent(Student student) {
         return true;
     }
 
-    public boolean unenrollStudent(Student student){
+    public boolean unenrollStudent(Student student) {
         return true;
     }
 
