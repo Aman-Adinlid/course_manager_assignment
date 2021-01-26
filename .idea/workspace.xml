@@ -6,13 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d6e63ad9-4889-419a-a938-da997b23852a" name="Default Changelist" comment="Convert implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/course/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/course/CourseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/student/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/student/StudentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/CourseCollectionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/CourseCollectionRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,6 +39,96 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RunManager" selected="JUnit.CourseCollectionRepositoryTest.context_loads">
+    <configuration name="CourseCollectionRepositoryTest.context_loads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course_manager_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.course_manager_assignment.data.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon.course_manager_assignment.data.dao" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.course_manager_assignment.data.dao.CourseCollectionRepositoryTest" />
+      <option name="METHOD_NAME" value="context_loads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentCollectionRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course_manager_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.course_manager_assignment.data.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon.course_manager_assignment.data.dao" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.course_manager_assignment.data.dao.StudentCollectionRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentCollectionRepositoryTest.Test_CreateStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course_manager_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.course_manager_assignment.data.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon.course_manager_assignment.data.dao" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.course_manager_assignment.data.dao.StudentCollectionRepositoryTest" />
+      <option name="METHOD_NAME" value="Test_CreateStudent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentCollectionRepositoryTest.Test_findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course_manager_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.course_manager_assignment.data.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon.course_manager_assignment.data.dao" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.course_manager_assignment.data.dao.StudentCollectionRepositoryTest" />
+      <option name="METHOD_NAME" value="Test_findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentCollectionRepositoryTest.Test_findByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course_manager_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.course_manager_assignment.data.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon.course_manager_assignment.data.dao" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.course_manager_assignment.data.dao.StudentCollectionRepositoryTest" />
+      <option name="METHOD_NAME" value="Test_findByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CourseCollectionRepositoryTest.context_loads" />
+        <item itemvalue="JUnit.StudentCollectionRepositoryTest.Test_CreateStudent" />
+        <item itemvalue="JUnit.StudentCollectionRepositoryTest.Test_findAll" />
+        <item itemvalue="JUnit.StudentCollectionRepositoryTest.Test_findByName" />
+        <item itemvalue="JUnit.StudentCollectionRepositoryTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,7 +163,19 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1611617426447</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Convert implementation">
+      <created>1611619417691</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1611619417691</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Convert implementation">
+      <created>1611619466512</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1611619466512</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,5 +195,19 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="Convert implementation" />
     <option name="LAST_COMMIT_MESSAGE" value="Convert implementation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepositoryTest.java</url>
+          <line>37</line>
+          <properties class="se.lexicon.course_manager_assignment.data.dao.StudentCollectionRepositoryTest" method="Test_CreateStudent">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
