@@ -16,7 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
-
 @SpringBootTest(classes = {StudentCollectionRepository.class})
 public class StudentCollectionRepositoryTest {
 
@@ -30,7 +29,6 @@ public class StudentCollectionRepositoryTest {
     void context_loads() {
         assertFalse(testObject == null);
     }
-
 
 
     //Write your tests here
@@ -58,17 +56,16 @@ public class StudentCollectionRepositoryTest {
         assertEquals(student, testObject.findByEmailIgnoreCase(student.getEmail()));
     }
 
-     @Test
+    @Test
 
-     public void Test_findAll() {
-         List<Student> findAllStudents = new ArrayList<>();
-         Student student = new Student(2, "Aman", "23pinkpanda@gmail.com", "Sweden");
-          findAllStudents.add(student);
-          testObject.createStudent(student.getName(), student.getEmail(), student.getAddress());
+    public void Test_findAll() {
+        List<Student> findAllStudents = new ArrayList<>();
+        Student student = new Student(2, "Aman", "23pinkpanda@gmail.com", "Sweden");
+        findAllStudents.add(student);
+        testObject.createStudent(student.getName(), student.getEmail(), student.getAddress());
 
 
-
-     }
+    }
 
 
     @AfterEach

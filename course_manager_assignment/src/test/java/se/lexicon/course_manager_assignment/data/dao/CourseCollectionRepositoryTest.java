@@ -24,21 +24,22 @@ public class CourseCollectionRepositoryTest {
     private CourseDao testObject;
     private StudentDao testStudentObject;
 
-    Student student = new Student(231,"Aman","23pinkpend@gmail.com","Sweden");
+    Student student = new Student(231, "Aman", "23pinkpend@gmail.com", "Sweden");
 
     Collection<Course> courseList = new ArrayList<>();
     LocalDate date = LocalDate.of(2020, 12, 7);
-    Course course = new Course(1,"Java",date,1);
+    Course course = new Course(1, "Java", date, 1);
 
     @Test
     @DisplayName("Test context successfully setup")
-    void context_loads(){
+    void context_loads() {
         assertFalse(testObject == null);
     }
+
     //Write your tests here
-    public void test_createCourse(){
-      testObject.createCourse(course.getCourseName(),course.getStartDate(),course.getWeekDuration());
-      assertEquals(course,testObject.findAll());
+    public void test_createCourse() {
+        testObject.createCourse(course.getCourseName(), course.getStartDate(), course.getWeekDuration());
+        assertEquals(course, testObject.findAll());
 
     }
 
