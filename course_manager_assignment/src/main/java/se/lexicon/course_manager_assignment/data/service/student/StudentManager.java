@@ -9,11 +9,13 @@ import se.lexicon.course_manager_assignment.dto.forms.CreateStudentForm;
 import se.lexicon.course_manager_assignment.dto.forms.UpdateStudentForm;
 import se.lexicon.course_manager_assignment.dto.views.CourseView;
 import se.lexicon.course_manager_assignment.dto.views.StudentView;
+import se.lexicon.course_manager_assignment.model.Course;
 import se.lexicon.course_manager_assignment.model.Student;
 
 
+import java.util.Collection;
 import java.util.List;
-
+import java.util.concurrent.Callable;
 
 
 @Service
@@ -33,50 +35,47 @@ public class StudentManager implements StudentService {
     @Override
     public StudentView create(CreateStudentForm form) {
         return new StudentView(form.getId(), form.getName(), form.getEmail(), form.getAddress());
-
     }
 
     @Override
     public StudentView update(UpdateStudentForm form) {
-        if (form.getId() <1 ){
-            return null;
-        }
-
-        Student updateStudentView = studentDao.findById(form.getId());
-        updateStudentView.setName(form.getName());
-        updateStudentView.setAddress(form.getAddress());
-        updateStudentView.setEmail(form.getEmail());
-
-        return converters.studentToStudentView(updateStudentView);
+        Student update = studentDao.findById(form.getId());
+        update.setName(form.getName());
+        update.setAddress(form.getAddress());
+        update.setEmail(form.getEmail());
+        return converters.studentToStudentView(update);
 
     }
 
     @Override
     public StudentView findById(int id) {
-
-
-        Student findByIdStudentView = studentDao.findById(id);
-
-        return converters.studentToStudentView(findByIdStudentView);
+        Student findById = studentDao.findById(id);
+        return converters.studentToStudentView(findById);
     }
 
     @Override
     public StudentView searchByEmail(String email) {
-        return null;
+        Student searchByEmail = studentDao.findByEmailIgnoreCase(email);
+        return converters.studentToStudentView(searchByEmail);
+
     }
 
     @Override
     public List<StudentView> searchByName(String name) {
-        return null;
+        Collection<Student> searchByName = studentDao.findByNameContains(name);
+        return converters.studentsToStudentViews(searchByName);
     }
 
     @Override
     public List<StudentView> findAll() {
-        return null;
+        Collection<Student> findAll = studentDao.findAll();
+        return converters.studentsToStudentViews(findAll);
+
     }
 
     @Override
     public boolean deleteStudent(int id) {
-        return false;
+        boolean deleteStudent = studentDao.removeStudent(studentDao.findById(id));
+        return deleteStudent;
     }
 }

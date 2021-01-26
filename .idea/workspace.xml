@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d6e63ad9-4889-419a-a938-da997b23852a" name="Default Changelist" comment="Convert implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/converter/ModelToDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/converter/ModelToDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/course/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/course/CourseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/student/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/student/StudentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/model/Course.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +63,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1611282016938</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Convert implementation">
+      <created>1611617426447</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1611617426447</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
