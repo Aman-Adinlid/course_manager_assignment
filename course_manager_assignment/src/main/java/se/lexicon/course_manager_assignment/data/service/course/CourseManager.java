@@ -37,7 +37,7 @@ public class CourseManager implements CourseService {
 
     @Override
     public CourseView update(UpdateCourseForm form) {
-        Course update= courseDao.findById(form.getId());
+        Course update = courseDao.findById(form.getId());
         update.setCourseName(form.getCourseName());
         update.setStartDate(form.getStartDate());
         update.setWeekDuration(form.getWeekDuration());
