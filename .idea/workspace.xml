@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d6e63ad9-4889-419a-a938-da997b23852a" name="Default Changelist" comment="Convert implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/student/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/service/student/StudentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/CourseCollectionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/CourseCollectionRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/dao/CourseCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/dao/CourseCollectionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/course_manager_assignment/src/main/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +174,19 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1611619466512</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Convert implementation">
+      <created>1611697959191</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1611697959191</updated>
+    </task>
+    <task id="LOCAL−00008" summary="Convert implementation">
+      <created>1611697996750</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1611697996750</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,7 +212,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/course_manager_assignment/src/test/java/se/lexicon/course_manager_assignment/data/dao/StudentCollectionRepositoryTest.java</url>
-          <line>37</line>
+          <line>35</line>
           <properties class="se.lexicon.course_manager_assignment.data.dao.StudentCollectionRepositoryTest" method="Test_CreateStudent">
             <option name="EMULATED" value="true" />
           </properties>

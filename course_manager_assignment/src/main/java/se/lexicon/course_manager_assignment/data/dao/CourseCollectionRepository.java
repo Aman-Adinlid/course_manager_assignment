@@ -23,22 +23,24 @@ public class CourseCollectionRepository implements CourseDao {
         int Id = StudentSequencer.nextStudentId();
         Course course = new Course(Id, courseName, startDate, weekDuration);
         if (course.equals(null)) {
-            throw new IllegalArgumentException("Obj is null");
+            return null;
         }
         for (Course course1 : courses) {
             if (course1.getId() == course1.getId()) {
                 return null;
             }
         }
+        courses.add(course);
         return course;
     }
 
     @Override
     public Course findById(int id) {
-        if (id <= 0) {
-            throw new IllegalArgumentException(" No");
-        }
         Course course = new Course();
+
+        if (id <= 0) {
+            return null;
+        }
         for (Course course1 : courses) {
             if (course1.getId() == id) {
                 course = course1;
@@ -51,22 +53,44 @@ public class CourseCollectionRepository implements CourseDao {
     @Override
     public Collection<Course> findByNameContains(String name) {
         List<Course> courseList = new ArrayList<>();
-        for (Course course : courses)
+
+        if (name.equals(null)) {
+            return null;
+        }
+        for (Course course : courses) {
             if (course.getCourseName().contains(name)) {
                 courseList.add(course);
-                return courseList;
             }
-        return null;
+        }
+        return courseList;
     }
 
     @Override
     public Collection<Course> findByDateBefore(LocalDate end) {
-        return null;
+        List<Course> result = new ArrayList<>();
+        if (end.equals(null)) {
+            return null;
+        }
+        for (Course course : courses) {
+            if (course.getStartDate().plusWeeks(course.getWeekDuration()).isBefore(end)) {
+                result.add(course);
+            }
+        }
+        return result;
     }
 
     @Override
     public Collection<Course> findByDateAfter(LocalDate start) {
-        return null;
+        List<Course> result = new ArrayList<>();
+        if (start.equals(null)) {
+            return null;
+        }
+        for (Course course : courses) {
+            if (course.getStartDate().isAfter(start)) {
+                result.add(course);
+            }
+        }
+        return result;
     }
 
     @Override
@@ -81,27 +105,28 @@ public class CourseCollectionRepository implements CourseDao {
 
     @Override
     public Collection<Course> findByStudentId(int studentId) {
-        if (studentId <= 0) {
-            throw new IllegalArgumentException(" Not true");
-        }
         Student student = new Student();
-        List<Course> courses1 = new ArrayList<>();
+        List<Course> theCourseArray = new ArrayList<>();
+        if (studentId <= 0) {
+            return null;
+        }
+
         for (Course course : courses) {
-            for (Student stn : course.getStudents()) {
-                student = stn;
+            for (Student student1 : course.getStudents()) {
+                student = student1;
                 if (student.getId() == studentId) {
-                    courses1.add(course);
+                    theCourseArray.add(course);
                 }
             }
         }
-        return courses1;
+        return theCourseArray;
     }
 
     @Override
     public boolean removeCourse(Course course) {
         boolean remove = false;
         if (course.equals(null)) {
-            throw new IllegalArgumentException("Null");
+            return false;
         }
         Iterator<Course> iterator = courses.iterator();
         while (iterator.hasNext()) {
