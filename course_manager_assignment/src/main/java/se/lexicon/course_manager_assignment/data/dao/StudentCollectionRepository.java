@@ -18,6 +18,14 @@ public class StudentCollectionRepository implements StudentDao {
         int id = StudentSequencer.nextStudentId();
         Student student = new Student(id, name, email, address);
 
+        if (student.equals(null)) {
+            return null;
+        }
+        for (Student student1 : students) {
+            if (student1.getEmail() == student.getEmail()) {
+                return null;
+            }
+        }
         students.add(student);
         return student;
     }
