@@ -1,6 +1,7 @@
 package se.lexicon.course_manager_assignment.data.dao;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
@@ -23,6 +23,7 @@ public class StudentCollectionRepositoryTest {
     private StudentDao testObject;
     Collection<Student> studentList = new ArrayList<>();
     Student student = new Student(2, "Aman", "23pinkpanda@gmail.com", "Sweden");
+    Student student1 = new Student(3, "Sara", "test", "test");
 
     @Test
     @DisplayName("Test context successfully setup")
@@ -34,35 +35,48 @@ public class StudentCollectionRepositoryTest {
     //Write your tests here
     @Test
     public void Test_CreateStudent() {
-        Student student = new Student(2, "Aman", "23pinkpanda@gmail.com", "Sweden");
         testObject.createStudent(student.getName(), student.getEmail(), student.getAddress());
+        assertFalse(student.equals(testObject.findById(2)));
+        assertFalse(student.equals(testObject.findAll()));
 
 
     }
 
     @Test
     public void test_findById() {
-        Student expectedStudent = student;
+        Student student = new Student(2, "Aman", "23pinkpanda@gmail.com", "Sweden");
         testObject.createStudent(student.getName(), student.getEmail(), student.getAddress());
-        Student actualStudent = testObject.findById(student.getId());
+
 
     }
 
     @Test
 
     public void Test_findByName() {
-        Student student = new Student("Aman", "test", "Sweden");
+        List<Student> students = new ArrayList<>();
+        students.add(student);
         testObject.createStudent(student.getName(), student.getEmail(), student.getAddress());
-        assertEquals(student, testObject.findByEmailIgnoreCase(student.getEmail()));
+
+        Collection<Student> actualStudents = testObject.findByNameContains("Aman");
+
+        assertEquals(student, testObject.findByNameContains(student.getName()));
+
+
     }
+
+    private void assertEquals(Student student, Collection<Student> byNameContains) {
+    }
+
 
     @Test
 
     public void Test_findAll() {
-        List<Student> findAllStudents = new ArrayList<>();
-        Student student = new Student(2, "Aman", "23pinkpanda@gmail.com", "Sweden");
-        findAllStudents.add(student);
         testObject.createStudent(student.getName(), student.getEmail(), student.getAddress());
+        testObject.createStudent(student1.getName(), student1.getEmail(), student1.getAddress());
+        studentList.add(student);
+        studentList.add(student1);
+        Collection<Student> actualStudents = testObject.findAll();
+        Assertions.assertEquals(studentList, actualStudents);
 
 
     }
