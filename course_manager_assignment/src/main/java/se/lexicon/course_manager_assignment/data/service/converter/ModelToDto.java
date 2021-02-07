@@ -42,6 +42,6 @@ public class ModelToDto implements Converters {
         for (Student student : students) {
             result.add(studentToStudentView(student));
         }
-        return null;
+        return result;
     }
 }
